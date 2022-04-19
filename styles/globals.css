@@ -23,4 +23,7 @@
   nav a {
     @apply  border-red-500 p-1 transition-all hover:border-b-4 hover:text-red-500;
   }
+  input, textarea {
+    @apply bg-gray-300 text-gray-900 p-2 rounded-sm focus:border-red-500 outline-none border-2 border-transparent
+  }
 }
