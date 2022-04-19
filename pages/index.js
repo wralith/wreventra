@@ -1,6 +1,6 @@
 import Link from "next/link"
 import EventList from "../components/Layout/events/EventList"
-import Navbar from "../components/Layout/Navbar"
+import Layout from "../components/Layout/Layout"
 
 const TEST_EVENTS = [
   {
@@ -25,10 +25,8 @@ const TEST_EVENTS = [
 
 export default function Home() {
   return (
-    <>
-      <Navbar/>
+      <Layout>
       <EventList events={TEST_EVENTS}/>
-
-    </>
+      </Layout>
   )
 }
