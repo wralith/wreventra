@@ -1,6 +1,6 @@
 import { useRef } from "react";
 
-function NewEventForm() {
+function NewEventForm(props) {
   const titleInputRef = useRef();
   const imageInputRef = useRef();
   const addressInputRef = useRef();
@@ -58,7 +58,7 @@ function NewEventForm() {
             ref={descriptionInputRef}
           />
         </div>
-        <button className="mt-6 flex bg-red-500 p-3 transition-colors hover:bg-red-900">
+        <button className="mt-6 flex btn-primary">
           Create Event
         </button>
       </form>

@@ -1,11 +1,13 @@
 import NewEventForm from "../../components/Layout/events/NewEventForm";
-import Layout from "../../components/Layout/Layout";
 
 function NewEventPage() {
+  const handleCreateEvent = (eventData) => {
+    console.log(eventData)
+  }
+
   return (
-    <Layout>
-      <NewEventForm />
-    </Layout>
+      <NewEventForm onCreateEvent={handleCreateEvent} />
+    
   );
 }
 

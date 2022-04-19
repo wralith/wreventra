@@ -7,7 +7,7 @@ import {GiHamburgerMenu} from 'react-icons/gi'
 function Navbar() {
   return (
     <nav>
-      <h3 id="logo">Eventy</h3>
+      <h3 id="logo">Wreventra</h3>
       <ul className="md:flex hidden flex-row items-center justify-end gap-6">
         <li>
           <Link href="/">Events</Link>
