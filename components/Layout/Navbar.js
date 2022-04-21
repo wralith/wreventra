@@ -31,7 +31,7 @@ function Navbar() {
         <h3 id="logo"><Link href='/'>Wreventra</Link></h3>
         <ul className={`${isHamburger ? smallScreenListClasses : mediumPlusListClasses} md:opacity-100 md:flex md:relative flex-row justify-end gap-6`}>
           <li>
-            <Link href="/">Events</Link>
+            <Link href="/event">Events</Link>
           </li>
           <li>
             <Link href="/new-event">Create Event</Link>
