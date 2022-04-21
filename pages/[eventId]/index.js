@@ -1,15 +1,15 @@
 import EventDetail from "../../components/events/EventDetail";
-import { MongoClient } from "mongodb";
+import { MongoClient , ObjectId } from "mongodb";
 
-function EventDetailPage() {
+function EventDetailPage(props) {
   return (
     <EventDetail
       id="e2"
-      title="Not a Test Event"
-      description="No, This is not a description of the event"
-      image="https://via.placeholder.com/250x200?text=Event"
-      address="X Street, Y Building"
-      date={Date.now()}
+      title={props.eventData.title}
+      description={props.eventData.description}
+      image={props.eventData.image}
+      address={props.eventData.address}
+      date={props.eventData.date}
     />
   );
 }
@@ -40,13 +40,20 @@ export async function getStaticProps(context) {
   const db = client.db();
 
   const eventCollection = db.collection("events");
-  const selectedEvent = await eventCollection.findOne({ _id: eventId });
+  const selectedEvent = await eventCollection.findOne({ _id: ObjectId(eventId) });
 
   client.close();
 
   return {
     props: {
-      eventData: selectedEvent,
+      eventData: {
+        id: selectedEvent._id.toString(),
+        title: selectedEvent.title,
+        description: selectedEvent.description,
+        image: selectedEvent.image,
+        address: selectedEvent.address,
+        date: selectedEvent.date,
+      },
     },
   };
 }
