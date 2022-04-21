@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@react-hook/window-size": "^3.0.7",
+    "mongodb": "^4.5.0",
     "next": "12.1.5",
     "react": "18.0.0",
     "react-dom": "18.0.0",

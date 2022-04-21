@@ -34,10 +34,10 @@ function Navbar() {
             <Link href="/">Events</Link>
           </li>
           <li>
-            <Link href="/create-event">Create Event</Link>
+            <Link href="/new-event">Create Event</Link>
           </li>
           <li>
-            <Link href="/">About</Link>
+            <Link href="/about">About</Link>
           </li>
           <li>
             <Link href="/">Follow Us</Link>
