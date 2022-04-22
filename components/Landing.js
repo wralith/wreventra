@@ -24,7 +24,7 @@ function Landing() {
         </div>
         <div className="pointer-events-none absolute hidden overflow-clip object-cover lg:inline-block">
           <img
-            className="relative left-[50%] h-full rounded-full object-fill shadow-lg"
+            className="relative left-[50%] h-full rounded-full object-fill shadow-lg "
             src="https://images.pexels.com/photos/1763075/pexels-photo-1763075.jpeg"
             alt="concert-img"
             width="100%"

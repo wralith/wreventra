@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { useRouter } from "next/router";
 import NewEventForm from "../../components/events/NewEventForm";
 
@@ -16,7 +17,15 @@ function NewEventPage() {
     router.push("/");
   };
 
-  return <NewEventForm onCreateEvent={handleCreateEvent} />;
+  return (
+    <>
+      <Head>
+        <title>Create New Event</title>
+        <meta name="description" content="Create a new event and publish" />
+      </Head>
+      <NewEventForm onCreateEvent={handleCreateEvent} />
+    </>
+  );
 }
 
 export default NewEventPage;
